@@ -1,5 +1,6 @@
 def rgb(r, g, b):
-    return ((1 << 24) + (r << 16) + (g << 8) + b).to_bytes(4, "big")[1:].hex().upper()
+    r, g, b = (max(0, min(255, x)) for x in (r, g, b))
+    return f"{r:02X}{g:02X}{b:02X}"
 
 
 def test_rgb_black():
@@ -12,3 +13,7 @@ def test_rgb_small_values():
 
 def test_rgb_white():
     assert rgb(255, 255, 255) == "FFFFFF"
+
+
+def test_rgb():
+    assert rgb(-20, 275, 125) == "00FF7D"
