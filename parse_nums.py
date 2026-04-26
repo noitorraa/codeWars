@@ -6,4 +6,9 @@ def get_age_alternative(age):
     return int(age[0])
 
 
-print(get_age("2 years old"))
+def test_get_age():
+    assert get_age("2 years old") == 2
+
+
+def test_get_age_alternative():
+    assert get_age_alternative("2 years old") == 2

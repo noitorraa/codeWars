@@ -12,5 +12,9 @@ def fake_bin_alternative(x):
     return "".join("0" if c < "5" else "1" for c in x)
 
 
-print(fake_bin("45385593107843568"))
-print(fake_bin_alternative("45385593107843568"))
+def test_fake_bin():
+    assert fake_bin("45385593107843568") == "01011110001100111"
+
+
+def test_fake_bin_alternative():
+    assert fake_bin_alternative("45385593107843568") == "01011110001100111"

@@ -54,7 +54,17 @@ def divided_by(y):
     return lambda x: x // y
 
 
-print(seven(times(five())))  #  must return 35
-# print(four(plus(nine())))  #  must return 13
-# print(eight(minus(three())))  #  must return 5
-# print(six(divided_by(two())))  #  must return 3
+def test_seven_times_five():
+    assert seven(times(five())) == 35
+
+
+def test_four_plus_nine():
+    assert four(plus(nine())) == 13
+
+
+def test_eight_minus_three():
+    assert eight(minus(three())) == 5
+
+
+def test_six_divided_by_two():
+    assert six(divided_by(two())) == 3

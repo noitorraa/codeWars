@@ -7,5 +7,9 @@ def DNA_strand_alternative(dna):
     return dna.translate(str.maketrans("ATCG", "TAGC"))
 
 
-print(DNA_strand("ATTGC"))
-print(DNA_strand_alternative("ATTGCAATGGGCAC"))
+def test_DNA_strand():
+    assert DNA_strand("ATTGC") == "TAACG"
+
+
+def test_DNA_strand_alternative():
+    assert DNA_strand_alternative("ATTGCAATGGGCAC") == "TAACGTTACCCGTG"

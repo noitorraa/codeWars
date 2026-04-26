@@ -2,5 +2,9 @@ def duplicate_encode(word):
     return "".join(")" if word.lower().count(ch) > 1 else "(" for ch in word.lower())
 
 
-print(duplicate_encode("recede"))
-print(duplicate_encode("Success"))
+def test_duplicate_encode_recede():
+    assert duplicate_encode("recede") == "()()()"
+
+
+def test_duplicate_encode_success():
+    assert duplicate_encode("Success") == ")())())"

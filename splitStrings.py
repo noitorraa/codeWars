@@ -5,4 +5,5 @@ def solution(s):
     return dictionary
 
 
-print(solution("adakdmekfemadcwec"))
+def test_solution():
+    assert solution("adakdmekfemadcwec") == ['ad', 'ak', 'dm', 'ek', 'fe', 'ma', 'dc', 'we', 'c_']

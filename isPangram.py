@@ -15,5 +15,10 @@ def is_pangram(st):
     return True if alphabet <= set(st.lower()) else False
 
 
-for i in pangrams:
-    print(is_pangram(i))
+def test_is_pangram():
+    assert is_pangram("The quick brown fox jumps over the lazy dog.") == True
+    assert is_pangram("Cwm fjord bank glyphs vext quiz") == True
+    assert is_pangram("Pack my box with five dozen liquor jugs.") == True
+    assert is_pangram("How quickly daft jumping zebras vex.") == True
+    assert is_pangram("ABCD45EFGH,IJK,LMNOPQR56STUVW3XYZ") == True
+    assert is_pangram("wefwfvt") == False

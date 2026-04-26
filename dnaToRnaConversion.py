@@ -6,5 +6,9 @@ def dna_to_rna_alternative(dna):
     return dna.replace("T", "U")
 
 
-print(dna_to_rna("GAAGTTCTAG"))
-print(dna_to_rna_alternative("GAAGTTCTAG"))
+def test_dna_to_rna():
+    assert dna_to_rna("GAAGTTCTAG") == "GAAGUUCUAG"
+
+
+def test_dna_to_rna_alternative():
+    assert dna_to_rna_alternative("GAAGTTCTAG") == "GAAGUUCUAG"
